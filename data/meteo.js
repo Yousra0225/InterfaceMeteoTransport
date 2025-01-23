@@ -10,8 +10,11 @@ fetch('config/config.json')
         fetch(url)
         .then(response=>response.json())
         .then(weatherData =>{
-            console.log(weatherData);
-            console.log(weatherData.main.temp);
+            // Mis à jours des données
+            document.getElementById('cityname').textContent = `${city}`;
+            document.getElementById('currenttemp').textContent = `${weatherData.main.temp}°C`;
+            document.getElementById('humidity').textContent = `${weatherData.main.humidity}%`;
+
         })
         .catch(error=>console.error("erreur lors de la recuperation des données météo", error));
     })

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <meta xharset="UTF-8">
+        <meta charset="UTF-8">
         <title>Interface web </title>
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
         <div class ="wheathercontainer">
-            <h1 class = cityname>Lille</h1>
+            <h1 class = cityname id="cityname">Lille</h1>
             <div class="icone">
-                <img class="sunicon" src="data/sunicone.png" alt="meteo">
-
+                <img class="sunicon" id="sunicon" src="data/sunicone.png" alt="meteo">
             </div>
             <div class ="temperature">
-                <span class="tempactuel">6°C</span>
-                <div class="temperature min et max">
-                    <div class="humidity">Humidity: 70%</div>
+                <span class="currenttemp" id="currenttemp">6°C</span>
+                <div class="temperature range">
+                    <div class="humidity" id="humidity">Humidity: 70%</div>
                 </div>
             </div>
-            
         </div>
+        <script src="data/meteo.js"></script>
     </body>
 </html>
