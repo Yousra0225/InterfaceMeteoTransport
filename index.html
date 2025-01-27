@@ -3,19 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>Interface web </title>
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
         <div class ="wheathercontainer">
             <h1 class ="cityname" id="cityname">Lille</h1>
-            <div class="tempdesc" id="descicon">
-                <div class="currenttemp" id="currenttemp">undefined</div>
-                <div class="description" id="description">undefined</div>
+
+           <div class="currenttempdesccicone">
+                <div class="tempdesc" id="descicon">
+                    <div class="currenttemp" id="currenttemp">undefined</div>
+                    <div class="description" id="description">undefined</div>
+                </div>
+                <div class="icone"><img class="nullicon" id="nullicon" src="data/null.png" alt="meteo"> </div>
+           </div>
+            
+            <div class="humidite">
+                <div class="humidityword">Humidity :</div>
+                <div id="humidity">undefiend</div>
             </div>
-            <div class="icone">
-                <img class="nullicon" id="nullicon" src="data/null.png" alt="meteo"> 
-            </div>
-            <div id="humidity">undefiend</div>
         </div>
         <script src="data/meteo.js"></script>
     </body>

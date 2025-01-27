@@ -1,0 +1,61 @@
+body {
+    margin:auto;    
+    margin-top: 100px;
+    background-color: rgb(241, 157, 157);
+    max-width: 450px;
+    max-height: 500px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120%;
+    color : white;
+}
+
+.wheathercontainer{
+    background-color: rgb(100, 48, 58);
+    padding: 50px;
+    border-radius: 30px;
+
+}
+
+.currenttempdesccicone{
+    display: flex;
+    flex-direction: row;
+}
+.currenttemp{
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 30px;
+} 
+
+.nullicon {
+    height: 100px;
+    width: 100px;
+    margin-left: 150px;
+    ;
+
+}
+
+.description {
+    color:rgb(255, 168, 168);
+    margin: auto;
+    font-size:15px;
+}
+
+
+.humidite{
+    display: flex;
+    flex-direction: row;
+}
+
+.humidityword{
+    color:rgb(255, 168, 168) ;
+    font-size: 15px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+humidity{
+    color:white;
+}
+
+
+
