@@ -1,5 +1,12 @@
-// récupération de l'information (la ville) présente dans config.json
-fetch(`config/config.json?timestamp=${new Date().getTime()}`)
+/**
+ * @function fetchWeatherData ; charge les données méteo en utilisant API openWeathermap, et garantis la mis à jour des données sur la page web
+ * @param void
+ * @return void
+ * @throws errors 
+ */
+function fetchWeatherData(){
+
+    fetch(`config/config.json?timestamp=${new Date().getTime()}`)
     .then(response =>response.json())
     .then(data =>{
         const city = data.city;
@@ -13,7 +20,7 @@ fetch(`config/config.json?timestamp=${new Date().getTime()}`)
             // Mis à jours des données
             document.getElementById('cityname').textContent = `${city}`;
             document.getElementById('currenttemp').textContent = `${convertCelsius(weatherData.main.temp)}°C`;
-            document.getElementById('humidity').textContent = `Humidity : ${weatherData.main.humidity}%`;
+            document.getElementById('humidity').textContent = `${weatherData.main.humidity}%`;
             document.getElementById('description').textContent=`${weatherData.weather[0].description}`;
             
             const icone = weatherData.weather[0].icon;
@@ -23,15 +30,19 @@ fetch(`config/config.json?timestamp=${new Date().getTime()}`)
         .catch(error=>console.error("erreur lors de la recuperation des données météo", error));
     })
     .catch(error=>console.error("erreur lors du chargement du fichier config.json", error));
+}
 
+/**
+ * Fonction pour convertir la température en degré °C
+ * @param : tempKelvin : température récuperer en Kelvin par defaut
+ * @return :tempCelsius : température convertis en celsius
+ */
+function convertCelsius(tempKelvin){
+    const tempCelsius =  (tempKelvin - 273.15).toFixed(1);
+    return tempCelsius;
+}
 
+fetchWeatherData(); 
 
-    /**
-     * Fonction pour convertir la température en degré °C
-     * @param : tempKelvin : température récuperer en Kelvin par defaut
-     * @return :tempCelsius : température convertis en celsius
-     */
-    function convertCelsius(tempKelvin){
-        const tempCelsius =  (tempKelvin - 273.15).toFixed(1);
-        return tempCelsius
-    }
+setInterval(fetchWeatherData,360000);
+    
