@@ -12,9 +12,12 @@ fetch(`config/config.json?timestamp=${new Date().getTime()}`)
         .then(weatherData =>{
             // Mis à jours des données
             document.getElementById('cityname').textContent = `${city}`;
-            
             document.getElementById('currenttemp').textContent = `${convertCelsius(weatherData.main.temp)}°C`;
-            document.getElementById('humidity').textContent = `${weatherData.main.humidity}%`;
+            document.getElementById('humidity').textContent = `Humidity : ${weatherData.main.humidity}%`;
+            document.getElementById('description').textContent=`${weatherData.weather[0].description}`;
+            
+            const icone = weatherData.weather[0].icon;
+            document.getElementById('nullicon').src=`https://openweathermap.org/img/wn/${icone}.png`;
 
         })
         .catch(error=>console.error("erreur lors de la recuperation des données météo", error));
