@@ -1,5 +1,5 @@
 // récupération de l'information (la ville) présente dans config.json
-fetch('config/config.json')
+fetch(`config/config.json?timestamp=${new Date().getTime()}`)
     .then(response =>response.json())
     .then(data =>{
         const city = data.city;
@@ -29,6 +29,6 @@ fetch('config/config.json')
      * @return :tempCelsius : température convertis en celsius
      */
     function convertCelsius(tempKelvin){
-        const tempCelsius =  tempKelvin - 273.15;
+        const tempCelsius =  (tempKelvin - 273.15).toFixed(1);
         return tempCelsius
     }

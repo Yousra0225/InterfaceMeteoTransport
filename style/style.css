@@ -1,16 +1,12 @@
 body {
     margin:auto;    
     margin-top: 150px;
-    background-color: pink;
-    max-width: 400px;
+    background-color: rgb(196, 141, 150);
+    max-width: 450px;
     max-height: 500px;
     font-family: 'Open Sans', sans-serif;
     font-size: 120%;
     color : white;
-}
-
-
-.temperature{
 }
 
 .sunicon{
