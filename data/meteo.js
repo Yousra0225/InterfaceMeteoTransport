@@ -12,10 +12,23 @@ fetch('config/config.json')
         .then(weatherData =>{
             // Mis à jours des données
             document.getElementById('cityname').textContent = `${city}`;
-            document.getElementById('currenttemp').textContent = `${weatherData.main.temp}°C`;
+            
+            document.getElementById('currenttemp').textContent = `${convertCelsius(weatherData.main.temp)}°C`;
             document.getElementById('humidity').textContent = `${weatherData.main.humidity}%`;
 
         })
         .catch(error=>console.error("erreur lors de la recuperation des données météo", error));
     })
     .catch(error=>console.error("erreur lors du chargement du fichier config.json", error));
+
+
+
+    /**
+     * Fonction pour convertir la température en degré °C
+     * @param : tempKelvin : température récuperer en Kelvin par defaut
+     * @return :tempCelsius : température convertis en celsius
+     */
+    function convertCelsius(tempKelvin){
+        const tempCelsius =  tempKelvin - 273.15;
+        return tempCelsius
+    }
