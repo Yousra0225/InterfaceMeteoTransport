@@ -1,37 +1,39 @@
 body {
     margin:auto;    
     margin-top: 100px;
-    background-color: rgb(241, 157, 157);
+    background-color:rgb(25, 23, 23);
     max-width: 450px;
     max-height: 500px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 120%;
+    font-size: 130%;
     color : white;
 }
 
 .wheathercontainer{
-    background-color: rgb(103, 45, 56);
+    background-color: rgb(96, 42, 52);
     padding: 50px;
     border-radius: 30px;
-
+    border-style:inset;
 }
 
-.currenttempdesccicone{
+.temperature{
     display: flex;
     flex-direction: row;
 }
 .currenttemp{
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 10px;
     font-size: 30px;
 } 
 
 .nullicon {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     margin-left: 150px;
-    ;
-
+    filter: brightness(0.8) contrast(1.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30%;
+    border-style:outset;
 }
 
 .description {
@@ -40,22 +42,37 @@ body {
     font-size:15px;
 }
 
-
-.humidite{
+.otherData{
     display: flex;
     flex-direction: row;
+    font-size: 18px;
+    margin-top: 15px;
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
-.humidityword{
+.humidityWord{
     color:rgb(255, 168, 168) ;
     font-size: 15px;
     margin-right: 5px;
-    margin-top: 2px;
+    margin-top: 20px;
 }
 
-humidity{
+.humidityValue{
     color:white;
+    padding-left: 5px;
+    padding-top: 18px;
 }
 
+.windSpeedW{
+    color:rgb(255, 168, 168);
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+.windSpeedValue {
+    margin-top: 18px;
+    margin-left: 15px;
+}
 
 
