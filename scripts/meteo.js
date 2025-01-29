@@ -1,8 +1,8 @@
 /**
  * @function fetchWeatherData ; charge les données méteo en utilisant API openWeathermap, et garantis la mis à jour des données sur la page web
  * @param void
- * @return void
- * @throws errors 
+ * @return {void}
+ * @throws {errors} 
  */
 function fetchWeatherData(){
 
@@ -20,8 +20,9 @@ function fetchWeatherData(){
             // Mis à jours des données
             document.getElementById('cityname').textContent = `${city}`;
             document.getElementById('currenttemp').textContent = `${convertCelsius(weatherData.main.temp)}°C`;
-            document.getElementById('humidity').textContent = `${weatherData.main.humidity}%`;
+            document.getElementById('humidityValue').textContent = `${weatherData.main.humidity}%`;
             document.getElementById('description').textContent=`${weatherData.weather[0].description}`;
+            document.getElementById('windSpeedValue').textContent=`${(weatherData.wind.speed *3.6).toFixed(1)}km/h  `;
             
             const icone = weatherData.weather[0].icon;
             document.getElementById('nullicon').src=`https://openweathermap.org/img/wn/${icone}.png`;
@@ -43,6 +44,5 @@ function convertCelsius(tempKelvin){
 }
 
 fetchWeatherData(); 
-
 setInterval(fetchWeatherData,3600000);
     
