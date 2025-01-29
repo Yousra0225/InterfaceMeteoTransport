@@ -35,3 +35,7 @@ Ce projet est une application web qui affiche les données météo d'une ville e
 #### Utilisation d'un serveur local
 
 J'ai installé l'extension "Live Server" du VS-Code et ouvrer le fichier index.html avec.
+
+### Aperçu du projet : 
+
+![aperçu.png](data/aperçu.png)
