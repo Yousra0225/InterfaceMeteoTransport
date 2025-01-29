@@ -23,15 +23,15 @@ Ce projet est une application web qui affiche les données météo d'une ville e
 
 ### Installation
 
-#### Clonez le dépôt :
+#### Clonage du dépôt :
 
-`git clone https://github.com/votre-repo.git`
+`git clone https://github.com/Yousra0225/InterfaceMeteoTransport.git`
 
 #### Structure du projet : 
 
 ![structure.png](data/structure.png)
 
 
-#### Utilisation :
+#### Utilisation d'un serveur local
 
-    
+J'ai installé l'extension "Live Server" du VS-Code et ouvrer le fichier index.html avec.
