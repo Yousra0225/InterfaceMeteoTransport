@@ -6,22 +6,28 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <div class ="wheathercontainer">
-            <h1 class ="cityname" id="cityname">Lille</h1>
 
-           <div class="currenttempdesccicone">
+        <section class ="wheathercontainer">
+            <h1 class ="cityname" id="cityname">Ville inconnue</h1>
+
+           <div class="temperature">
                 <div class="tempdesc" id="descicon">
-                    <div class="currenttemp" id="currenttemp">undefined</div>
-                    <div class="description" id="description">undefined</div>
+                    <div class="currenttemp" id="currenttemp">-- °C</div>
+                    <div class="description" id="description">données indisponible</div>
                 </div>
                 <div class="icone"><img class="nullicon" id="nullicon" src="data/null.png" alt="meteo"> </div>
            </div>
             
-            <div class="humidite">
-                <div class="humidityword">Humidity :</div>
-                <div id="humidity">undefiend</div>
+            <div class="otherData">
+                <div class="humidityWord">Humidity : </div>
+                <div class="humidityValue" id="humidityValue">-- %</div>
+                <div class="windSpeedW" id="windSpeedW">Win Speed : </div>
+                <div class="windSpeedValue" id="windSpeedValue">--</div>
             </div>
-        </div>
+
+            
+        </section>
+
         <script src="scripts/meteo.js"></script>
     </body>
 </html>
