@@ -44,5 +44,5 @@ function convertCelsius(tempKelvin){
 
 fetchWeatherData(); 
 
-setInterval(fetchWeatherData,360000);
+setInterval(fetchWeatherData,3600000);
     
