@@ -1,5 +1,5 @@
 # Projet Météo avec l'API OpenWeatherMap 
-## Auteur : Yousra chbib
+## Auteur : Yousra Chbib
 
 ### Description : 
 
@@ -10,9 +10,9 @@ Ce projet est une application web qui affiche les données météo d'une ville e
 1. Affichage du nom de la ville.
 2. Température actuelle en degrés Celsius (°C).
 3. Description des conditions météorologique.
-4. Niveau d'humidité.
-5. Vitesse du vent en km/h.
-6. Icône météo associée aux conditions actuelles.
+4. Icône météo associée aux conditions actuelles.
+5. Niveau d'humidité.
+6. Vitesse du vent en km/h.
 
 ### Technologies Utilisées :
 
